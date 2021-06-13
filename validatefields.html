@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validation of Fields</title>
+	<script type="text/javascript">
+		function validaterequiredfield(thisform)
+		{
+			var username =thisform.uname.value;
+			var password =thisform.pwd.value;
+			if (username == null || username =="") 
+				{
+					alert("username cannot be blank");
+					thisform.uname.focus();
+					return false;
+				} 
+				return true;
+		}
+	</script>
+</head>
+<body>
+	<form action="submit.html" onsubmit="return validaterequiredfield(this)" method="Post">
+
+	Username: <input type="text" name="uname"></br>
+	Password: <input type="password" name="pwd"></br>
+	<input type="submit" name="Submit" value="submit"></br>
+</form>
+
+
+
+
+</body>
+</html>
